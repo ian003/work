@@ -14,12 +14,11 @@ public class UserServiceImpl implements UserService {
 		this.userDAO = userDAO;
 	}
 
-	public User loadById(int id) {
-		return userDAO.loadById(id);
+	public User load(User bean) {
+		return userDAO.load(bean);
 	}
 
 	public List<User> list() {
-		System.out.println("list ...");
 		return userDAO.list();
 	}
 }

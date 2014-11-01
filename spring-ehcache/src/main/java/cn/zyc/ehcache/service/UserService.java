@@ -6,7 +6,7 @@ import cn.zyc.ehcache.pojo.User;
 
 public interface UserService {
 
-	User loadById(int id);
+	User load(User bean);
 
 	List<User> list();
 }

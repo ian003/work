@@ -9,6 +9,9 @@
 		<!-- 缓存全局开关：默认是true，如果它配成false，其余各个Mapper XML文件配成支持cache也没用 -->
 		<setting name="cacheEnabled" value="true" />
 	</settings>
+	<typeAliases>
+		<typeAlias alias="User" type="cn.zyc.ehcache.pojo.User" />
+	</typeAliases>
 	<mappers>
 		<mapper resource="cn/zyc/ehcache/mapper/UserMapper.xml" />
 	</mappers>

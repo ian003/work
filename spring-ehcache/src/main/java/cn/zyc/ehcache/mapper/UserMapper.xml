@@ -12,12 +12,12 @@
     <property name="maxEntriesLocalDisk" value="10000000"/>  
     <property name="memoryStoreEvictionPolicy" value="LRU"/>  
 </cache>
-	<select id="loadById" resultType="cn.zyc.ehcache.pojo.User"
-		parameterType="java.lang.Integer" useCache="false">
-		SELECT * FROM users where id = ${id}
+	<select id="load" resultType="User"
+		parameterType="User" useCache="false">
+		SELECT * FROM users where id = #{id}
 	</select>
 
-	<select id="list" resultType="cn.zyc.ehcache.pojo.User" useCache="true">
+	<select id="list" resultType="User" useCache="true">
 		SELECT *
 		FROM users
 	</select>
