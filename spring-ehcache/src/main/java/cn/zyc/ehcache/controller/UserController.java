@@ -24,7 +24,7 @@ public class UserController {
 		this.userService = userService;
 	}
 
-	@RequestMapping("/list.do")
+	@RequestMapping(value="/list.do", method = RequestMethod.POST)
 	public @ResponseBody
 	ModelMap list(HttpServletRequest request, HttpServletResponse response,
 			ModelMap map) {
